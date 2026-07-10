@@ -97,19 +97,19 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
   var catalog = {
     eleventech: {
       title: "ElevenTech",
-      label: "GESTÃO PARA O AGRONEGÓCIO",
+      label: "PAINEL ADMIN + APP DE CAMPO",
       url: "https://eleventech.vercel.app/lpvendas",
-      description: "Plataforma de gestão para operações rurais e barracões, reunindo coleta, beneficiamento, estoque e financeiro em uma experiência conectada.",
+      description: "Plataforma de gestão para operações rurais e barracões, com um painel administrativo para acompanhar a operação e um aplicativo de campo para registrar coletas.",
       highlights: [
-        "Coleta e romaneios digitais, com dados chegando à base em tempo real.",
-        "Beneficiamento com controle de pesos, estoque, produção e vendas a granel.",
-        "Backoffice com produtores, financeiro, usuários e relatórios por unidade.",
-        "Perfis separados para administração, colaboradores, produtores e supervisão."
+        "Dashboard administrativo com volume, receita, perda, fluxo de cargas e alertas financeiros.",
+        "Central de operações com filtros e etapas de trânsito, beneficiamento, pagamento e finalização.",
+        "Aplicativo de campo para registrar coletas, consultar produtores e acompanhar o status das cargas.",
+        "Permissões separadas por perfil para proteger ações de administração, beneficiamento e estoque."
       ],
       images: [
-        { src: "assets/img/plataformas/eleventech-01.jpg", alt: "Landing page da ElevenTech para gestão do agronegócio", caption: "Visão geral" },
-        { src: "assets/img/plataformas/eleventech-02.jpg", alt: "Módulos operacionais da ElevenTech", caption: "Módulos estratégicos" },
-        { src: "assets/img/plataformas/eleventech-03.jpg", alt: "Recursos do aplicativo de coleta da ElevenTech", caption: "Fluxo de coleta" }
+        { src: "assets/img/plataformas/eleventech-admin-dashboard.jpg", alt: "Painel administrativo de relatórios da ElevenTech", caption: "Dashboard administrativo" },
+        { src: "assets/img/plataformas/eleventech-admin-operacao.jpg", alt: "Central de operações da ElevenTech", caption: "Central de operações" },
+        { src: "assets/img/plataformas/eleventech-user-coleta.jpg", alt: "Aplicativo de campo da ElevenTech para registrar coletas", caption: "Aplicativo de coleta" }
       ]
     }
   };
