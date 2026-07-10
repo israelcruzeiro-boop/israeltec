@@ -111,6 +111,27 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
         { src: "assets/img/plataformas/eleventech-admin-operacao.jpg", alt: "Central de operações da ElevenTech", caption: "Central de operações" },
         { src: "assets/img/plataformas/eleventech-user-coleta.jpg", alt: "Aplicativo de campo da ElevenTech para registrar coletas", caption: "Aplicativo de coleta" }
       ]
+    },
+    entstore: {
+      title: "ENTStore",
+      label: "TREINAMENTO, AUDITORIA E CONTEÚDO",
+      url: "https://storepagebr.vercel.app/lpage",
+      description: "Portal corporativo multiempresa que reúne capacitação, comunicação e auditoria em uma experiência personalizada para cada organização.",
+      highlights: [
+        "Painel administrativo com indicadores, usuários, repositórios, cursos, checklists e pesquisas.",
+        "Identidade visual configurável por empresa, com temas, cores e prévia da experiência do usuário.",
+        "Aplicativo mobile para acessar treinamentos, biblioteca, hubs e conteúdos corporativos.",
+        "Checklists de auditoria com perguntas, evidências, observações e planos de ação."
+      ],
+      images: [
+        { src: "assets/img/plataformas/entstore-01-admin-dashboard.png", alt: "Painel administrativo do ENTStore", caption: "Dashboard administrativo", fit: "cover" },
+        { src: "assets/img/plataformas/entstore-02-identidade-visual.png", alt: "Configuração de identidade visual do ENTStore", caption: "Identidade visual", fit: "cover" },
+        { src: "assets/img/plataformas/entstore-03-login-mobile.png", alt: "Login mobile do ENTStore", caption: "Login mobile", fit: "contain" },
+        { src: "assets/img/plataformas/entstore-04-home-mobile.png", alt: "Tela inicial mobile do ENTStore", caption: "Início do usuário", fit: "contain" },
+        { src: "assets/img/plataformas/entstore-05-curso-mobile.png", alt: "Experiência de curso mobile do ENTStore", caption: "Cursos", fit: "contain" },
+        { src: "assets/img/plataformas/entstore-06-checklists-mobile.png", alt: "Checklists e auditorias mobile do ENTStore", caption: "Checklists", fit: "contain" },
+        { src: "assets/img/plataformas/entstore-07-vistoria-mobile.png", alt: "Vistoria por checklist no ENTStore", caption: "Vistoria", fit: "contain" }
+      ]
     }
   };
 
@@ -127,6 +148,7 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
     var image = platform.images[index];
     mainImage.src = image.src;
     mainImage.alt = image.alt;
+    mainImage.style.objectFit = image.fit || "cover";
     thumbs.querySelectorAll(".platformmodal__thumb").forEach(function (thumb, thumbIndex) {
       thumb.classList.toggle("is-active", thumbIndex === index);
       thumb.setAttribute("aria-pressed", String(thumbIndex === index));
