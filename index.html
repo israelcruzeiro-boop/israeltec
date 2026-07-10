@@ -404,6 +404,46 @@
             <span class="livecard__desc">Instituto Kleber Caiado</span>
           </a>
         </div>
+
+        <div class="platforms" aria-label="Plataformas em destaque">
+          <div class="platforms__heading">
+            <p class="platforms__eyebrow">PROJETOS EM PROFUNDIDADE</p>
+            <h3>CONHEÇA AS <span>PLATAFORMAS</span> POR DENTRO</h3>
+            <p>Clique em uma plataforma para explorar as telas, os fluxos principais e os resultados que ela entrega.</p>
+          </div>
+
+          <div class="platforms__grid">
+            <button class="platform-card" type="button" data-platform="eleventech">
+              <span class="platform-card__visual">
+                <img src="assets/img/plataformas/eleventech-01.jpg" alt="Tela inicial da plataforma ElevenTech" loading="lazy">
+                <span class="platform-card__open">VER PLATAFORMA &rarr;</span>
+              </span>
+              <span class="platform-card__body">
+                <span class="platform-card__label">GESTÃO PARA O AGRONEGÓCIO</span>
+                <strong>ELEVENTECH</strong>
+                <span>Coleta, beneficiamento, estoque e financeiro conectados em uma única operação.</span>
+              </span>
+            </button>
+
+            <article class="platform-card platform-card--soon" aria-label="Espaço reservado para próxima plataforma">
+              <span class="platform-card__placeholder">02</span>
+              <span class="platform-card__body">
+                <span class="platform-card__label">PRÓXIMA PLATAFORMA</span>
+                <strong>EM BREVE</strong>
+                <span>Espaço reservado para a próxima experiência com galeria e detalhes.</span>
+              </span>
+            </article>
+
+            <article class="platform-card platform-card--soon" aria-label="Espaço reservado para próxima plataforma">
+              <span class="platform-card__placeholder">03</span>
+              <span class="platform-card__body">
+                <span class="platform-card__label">PRÓXIMA PLATAFORMA</span>
+                <strong>EM BREVE</strong>
+                <span>Espaço reservado para o próximo sistema em destaque.</span>
+              </span>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -500,6 +540,30 @@
       </div>
       <div class="sitemodal__footer">
         <a class="btn btn--neon sitemodal__visit" href="#" target="_blank" rel="noopener">ABRIR O SITE →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de plataformas com galeria e contexto -->
+  <div class="platformmodal" id="platformmodal" hidden>
+    <div class="platformmodal__backdrop" data-platform-modal-close></div>
+    <div class="platformmodal__panel" role="dialog" aria-modal="true" aria-labelledby="platformmodal-title">
+      <div class="platformmodal__bar">
+        <span class="platformmodal__eyebrow">PLATAFORMA EM DETALHE</span>
+        <button class="platformmodal__close" type="button" data-platform-modal-close aria-label="Fechar">&times;</button>
+      </div>
+      <div class="platformmodal__content">
+        <div class="platformmodal__gallery">
+          <img class="platformmodal__main-image" src="" alt="">
+          <div class="platformmodal__thumbs" aria-label="Telas da plataforma"></div>
+        </div>
+        <div class="platformmodal__info">
+          <p class="platformmodal__label"></p>
+          <h2 id="platformmodal-title"></h2>
+          <p class="platformmodal__description"></p>
+          <ul class="platformmodal__highlights"></ul>
+          <a class="btn btn--neon platformmodal__visit" href="#" target="_blank" rel="noopener">VER LANDING EM PRODUÇÃO &rarr;</a>
+        </div>
       </div>
     </div>
   </div>

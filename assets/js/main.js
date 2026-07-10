@@ -88,3 +88,103 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
     if (e.key === "Escape" && !modal.hidden) close();
   });
 })();
+
+// Modal de plataformas: galeria, contexto funcional e link de demonstração.
+(function () {
+  var modal = document.getElementById("platformmodal");
+  if (!modal) return;
+
+  var catalog = {
+    eleventech: {
+      title: "ElevenTech",
+      label: "GESTÃO PARA O AGRONEGÓCIO",
+      url: "https://eleventech.vercel.app/lpvendas",
+      description: "Plataforma de gestão para operações rurais e barracões, reunindo coleta, beneficiamento, estoque e financeiro em uma experiência conectada.",
+      highlights: [
+        "Coleta e romaneios digitais, com dados chegando à base em tempo real.",
+        "Beneficiamento com controle de pesos, estoque, produção e vendas a granel.",
+        "Backoffice com produtores, financeiro, usuários e relatórios por unidade.",
+        "Perfis separados para administração, colaboradores, produtores e supervisão."
+      ],
+      images: [
+        { src: "assets/img/plataformas/eleventech-01.jpg", alt: "Landing page da ElevenTech para gestão do agronegócio", caption: "Visão geral" },
+        { src: "assets/img/plataformas/eleventech-02.jpg", alt: "Módulos operacionais da ElevenTech", caption: "Módulos estratégicos" },
+        { src: "assets/img/plataformas/eleventech-03.jpg", alt: "Recursos do aplicativo de coleta da ElevenTech", caption: "Fluxo de coleta" }
+      ]
+    }
+  };
+
+  var title = modal.querySelector("#platformmodal-title");
+  var label = modal.querySelector(".platformmodal__label");
+  var description = modal.querySelector(".platformmodal__description");
+  var highlights = modal.querySelector(".platformmodal__highlights");
+  var mainImage = modal.querySelector(".platformmodal__main-image");
+  var thumbs = modal.querySelector(".platformmodal__thumbs");
+  var visit = modal.querySelector(".platformmodal__visit");
+  var lastFocus = null;
+
+  function setSlide(platform, index) {
+    var image = platform.images[index];
+    mainImage.src = image.src;
+    mainImage.alt = image.alt;
+    thumbs.querySelectorAll(".platformmodal__thumb").forEach(function (thumb, thumbIndex) {
+      thumb.classList.toggle("is-active", thumbIndex === index);
+      thumb.setAttribute("aria-pressed", String(thumbIndex === index));
+    });
+  }
+
+  function open(key, trigger) {
+    var platform = catalog[key];
+    if (!platform) return;
+
+    lastFocus = trigger;
+    title.textContent = platform.title;
+    label.textContent = platform.label;
+    description.textContent = platform.description;
+    visit.href = platform.url;
+    highlights.innerHTML = "";
+    thumbs.innerHTML = "";
+
+    platform.highlights.forEach(function (item) {
+      var li = document.createElement("li");
+      li.textContent = item;
+      highlights.appendChild(li);
+    });
+
+    platform.images.forEach(function (image, index) {
+      var thumb = document.createElement("button");
+      var thumbImage = document.createElement("img");
+      thumb.type = "button";
+      thumb.className = "platformmodal__thumb";
+      thumb.setAttribute("aria-label", "Ver tela: " + image.caption);
+      thumbImage.src = image.src;
+      thumbImage.alt = "";
+      thumb.appendChild(thumbImage);
+      thumb.addEventListener("click", function () { setSlide(platform, index); });
+      thumbs.appendChild(thumb);
+    });
+
+    setSlide(platform, 0);
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    modal.querySelector(".platformmodal__close").focus();
+  }
+
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.querySelectorAll("[data-platform]").forEach(function (trigger) {
+    trigger.addEventListener("click", function () { open(trigger.getAttribute("data-platform"), trigger); });
+  });
+
+  modal.querySelectorAll("[data-platform-modal-close]").forEach(function (element) {
+    element.addEventListener("click", close);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modal.hidden) close();
+  });
+})();
