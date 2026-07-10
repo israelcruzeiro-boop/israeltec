@@ -107,6 +107,7 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
         "Permissões separadas por perfil para proteger ações de administração, beneficiamento e estoque."
       ],
       images: [
+        { src: "assets/img/plataformas/eleventech-01.jpg", alt: "Landing page da ElevenTech para gestão do agronegócio", caption: "Landing page" },
         { src: "assets/img/plataformas/eleventech-admin-dashboard.jpg", alt: "Painel administrativo de relatórios da ElevenTech", caption: "Dashboard administrativo" },
         { src: "assets/img/plataformas/eleventech-admin-operacao.jpg", alt: "Central de operações da ElevenTech", caption: "Central de operações" },
         { src: "assets/img/plataformas/eleventech-user-coleta.jpg", alt: "Aplicativo de campo da ElevenTech para registrar coletas", caption: "Aplicativo de coleta" }
@@ -124,6 +125,7 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
         "Checklists de auditoria com perguntas, evidências, observações e planos de ação."
       ],
       images: [
+        { src: "assets/img/plataformas/entstore-00-landing-hero.png", alt: "Hero da landing page StorePage", caption: "Landing page", fit: "cover" },
         { src: "assets/img/plataformas/entstore-01-admin-dashboard.png", alt: "Painel administrativo do ENTStore", caption: "Dashboard administrativo", fit: "cover" },
         { src: "assets/img/plataformas/entstore-02-identidade-visual.png", alt: "Configuração de identidade visual do ENTStore", caption: "Identidade visual", fit: "cover" },
         { src: "assets/img/plataformas/entstore-03-login-mobile.png", alt: "Login mobile do ENTStore", caption: "Login mobile", fit: "contain" },
@@ -131,6 +133,24 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
         { src: "assets/img/plataformas/entstore-05-curso-mobile.png", alt: "Experiência de curso mobile do ENTStore", caption: "Cursos", fit: "contain" },
         { src: "assets/img/plataformas/entstore-06-checklists-mobile.png", alt: "Checklists e auditorias mobile do ENTStore", caption: "Checklists", fit: "contain" },
         { src: "assets/img/plataformas/entstore-07-vistoria-mobile.png", alt: "Vistoria por checklist no ENTStore", caption: "Vistoria", fit: "contain" }
+      ]
+    },
+    pageflow: {
+      title: "Page Flow",
+      label: "PERFIL DIGITAL, NFC E CONVERSÃO",
+      url: "https://pageflowbr.vercel.app/",
+      description: "SaaS de perfis digitais para transformar contatos em conexões de alto valor, unindo cartão NFC, links inteligentes, conteúdo e métricas em uma experiência premium.",
+      highlights: [
+        "Cartão digital com QR Code e NFC para compartilhar o perfil em segundos.",
+        "Hub personalizável com links, WhatsApp, redes sociais, catálogo, portfólio e vídeos.",
+        "Formulário de contato e avaliações para transformar visitas em oportunidades.",
+        "Telemetria de cliques e visualizações para acompanhar a performance do perfil."
+      ],
+      images: [
+        { src: "assets/img/plataformas/pageflow-00-landing-hero.jpg", alt: "Hero da landing page Page Flow", caption: "Landing page" },
+        { src: "assets/img/plataformas/pageflow-01-landing.jpg", alt: "Demonstração de perfis digitais do Page Flow", caption: "Perfis ao vivo" },
+        { src: "assets/img/plataformas/pageflow-03-profile.jpg", alt: "Perfil digital com portfólio e contato no Page Flow", caption: "Perfil digital" },
+        { src: "assets/img/plataformas/pageflow-03-recursos.jpg", alt: "Recursos SaaS premium do Page Flow", caption: "Recursos premium" }
       ]
     }
   };
