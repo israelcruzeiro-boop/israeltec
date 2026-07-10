@@ -48,3 +48,43 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
 
   start();
 });
+
+// Modal de prints dos sites (vitrine "Sites no ar")
+(function () {
+  var modal = document.getElementById("sitemodal");
+  if (!modal) return;
+
+  var img = modal.querySelector(".sitemodal__img");
+  var title = modal.querySelector(".sitemodal__title");
+  var visit = modal.querySelector(".sitemodal__visit");
+  var lastFocus = null;
+
+  function open(btn) {
+    lastFocus = btn;
+    img.src = btn.getAttribute("data-shot");
+    img.alt = "Print do site " + btn.getAttribute("data-title");
+    title.textContent = btn.getAttribute("data-title");
+    visit.href = btn.getAttribute("data-url");
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    modal.querySelector(".sitemodal__close").focus();
+  }
+
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.querySelectorAll(".browser[data-shot]").forEach(function (btn) {
+    btn.addEventListener("click", function () { open(btn); });
+  });
+
+  modal.querySelectorAll("[data-modal-close]").forEach(function (el) {
+    el.addEventListener("click", close);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.hidden) close();
+  });
+})();
